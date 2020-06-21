@@ -1,4 +1,5 @@
 public class Application {
+    // TODO add optimized solving
     public static void main(String[] args) {
         int[][] grid1 = {
                 {5,3,0,0,7,0,0,0,0},

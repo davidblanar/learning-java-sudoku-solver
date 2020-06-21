@@ -4,7 +4,7 @@ public class SudokuSolver {
     private final int BOX_SIZE = 3;
     private final Pair FULL_GRID = new Pair(GRID_SIZE, GRID_SIZE);
 
-    private int[][] grid;
+    private final int[][] grid;
     private long startTime;
     private long endTime;
 
