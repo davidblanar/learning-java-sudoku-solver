@@ -95,8 +95,8 @@ public class SudokuSolver {
         return false;
     }
 
-    // boxRow = x coordinate of top left tile of box
-    // boxCol = y coordinate of top left tile of box
+    // boxRow = y coordinate of top left tile of box
+    // boxCol = x coordinate of top left tile of box
     private boolean isInBox(int boxRow, int boxCol, int needle) {
         for (int row = 0; row < BOX_SIZE; row++) {
             for (int col = 0; col < BOX_SIZE; col++) {
