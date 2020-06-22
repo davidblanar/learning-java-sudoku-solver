@@ -46,16 +46,30 @@ public class Application {
                 {0,0,8,5,0,0,0,1,0},
                 {0,9,0,0,0,0,4,0,0}
         };
-        SudokuSolver sudokuSolver = new SudokuSolver(grid3);
-        System.out.println("Solving sudoku:");
-        sudokuSolver.printGrid();
+        int[][] easyGrid = {
+                {1,0,0},
+                {0,0,0},
+                {0,0,3}
+        };
+        int[][] easyGrid2 = {
+                {0,0,0,0},
+                {1,0,0,4},
+                {0,2,0,0},
+                {0,0,3,0}
+        };
+        long startTime = System.currentTimeMillis();
 
+        SudokuSolver sudokuSolver = new SudokuSolver(grid1);
+        System.out.println("Solving sudoku...");
+        sudokuSolver.printGrid();
         if (sudokuSolver.bruteForce()) {
-            System.out.println("Solution:");
+            System.out.println("Solution found");
             sudokuSolver.printGrid();
         } else {
             System.out.println("No solution found");
         }
-        sudokuSolver.printTime();
+
+        long endTime = System.currentTimeMillis();
+        System.out.printf("Took: %d ms", endTime - startTime);
     }
 }
