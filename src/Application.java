@@ -1,5 +1,5 @@
 public class Application {
-    // TODO add optimized solving
+    // TODO try and add further optimizations
     public static void main(String[] args) {
         int[][] grid1 = {
                 {5,3,0,0,7,0,0,0,0},
@@ -46,20 +46,10 @@ public class Application {
                 {0,0,8,5,0,0,0,1,0},
                 {0,9,0,0,0,0,4,0,0}
         };
-        int[][] easyGrid = {
-                {1,0,0},
-                {0,0,0},
-                {0,0,3}
-        };
-        int[][] easyGrid2 = {
-                {0,0,0,0},
-                {1,0,0,4},
-                {0,2,0,0},
-                {0,0,3,0}
-        };
+
         long startTime = System.currentTimeMillis();
 
-        SudokuSolver sudokuSolver = new SudokuSolver(grid1);
+        SudokuSolver sudokuSolver = new SudokuSolver(grid3);
         System.out.println("Solving sudoku...");
         sudokuSolver.printGrid();
         if (sudokuSolver.bruteForce()) {
